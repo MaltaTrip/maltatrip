@@ -1,2 +1,2 @@
 # maltatrip-backend
-MaltaTrip Backend Repo
+MaltaTrip Backend Repository
