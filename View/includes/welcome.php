@@ -36,7 +36,7 @@
             </font>
         </div>
         <div class="col-xs-6 col-md-3 text-center">
-            <img src="../../assets/images/Clock.png" class="img-rounded" style="width:75px; height:75px;">
+            <img src="../../assets/images/Time.png" class="img-rounded" style="width:75px; height:75px;">
         </div>
         <div class="col-xs-6 col-md-3 text-center">
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Save Time</p></font>
@@ -53,7 +53,7 @@
             </font>
         </div>
         <div class="col-xs-6 col-md-3 text-center">
-            <img src="../../assets/images/GasStation.png" class="img-rounded" style="width:75px; height:75px;">
+            <img src="../../assets/images/Fuel.png" class="img-rounded" style="width:75px; height:75px;">
         </div>
         <div class="col-xs-6 col-md-3 text-center">
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Save Fuel</p></font>
