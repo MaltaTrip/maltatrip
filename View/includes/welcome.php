@@ -66,12 +66,12 @@
     <br>
     <div class="row">
         <div class="col-xs-6 col-md-3">
-            <img src="../../assets/images/LogIn.png" class="center-block" style="width:75px; height:75px;">
+            <img src="../../assets/images/Login.png" class="center-block" style="width:75px; height:75px;">
             <br>
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Log In</p></font>
         </div>
         <div class="col-xs-6 col-md-3">
-            <img src="../../assets/images/EnterDetails.png" class="center-block" style="width:75px; height:75px;">
+            <img src="../../assets/images/Details.png" class="center-block" style="width:75px; height:75px;">
             <br>
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Enter Details</p>
             </font>
