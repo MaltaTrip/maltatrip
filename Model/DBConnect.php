@@ -10,7 +10,7 @@ class DBConnect {
 
     private $USER = "root";
     private $PASSWORD = "TriP334_0mm";
-    private $HOST = "localhost";
+    private $HOST = "52.29.204.229";
     private $DB_NAME = "maltatrip";
     private $OPTIONS = array(
         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
