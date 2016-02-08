@@ -1,0 +1,16 @@
+{
+  "name": "MaltaTrip/MaltaTrip Web",
+  "description": "The MaltaTrip request and response website",
+  "minimum-stability": "dev",
+  "license": "GNU General Public License v3",
+  "authors": [
+    {
+      "name": "MaltaTrip",
+      "email": "dev@maltatrip.com"
+    }
+  ],
+  "require": {
+    "twbs/bootstrap": "3.3.x-dev",
+    "twbs/bootstrap-glyphicons": "dev-gh-pages"
+  }
+}
