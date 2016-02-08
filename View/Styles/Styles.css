@@ -1,7 +1,66 @@
 body {
     padding-top: 50px;
 }
-.starter-template {
-    padding: 40px 15px;
-    text-align: center;
+.jumbotron {
+    color: white;
+    padding: 100px 25px;
+    margin-bottom: 0;
+    background-image: url("../../assets/images/car_passengers.png");
+    background-size: 100%;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+.container {
+    width: 100%;
+}
+
+
+.advantages {
+    background-color: #F2F2F2;
+    padding: 75px 100px 75px;
+}
+
+.how {
+    background-color: white;
+    padding: 75px 100px 75px;
+}
+
+.social {
+    background-color: black;
+    padding: 25px 25px;
+}
+
+.fa-facebook-official:hover {
+    color:#3b5998;
+}
+
+.fa-twitter-square:hover {
+    color:#1dcaff;
+}
+
+.fa-android:hover {
+    color: #A4C639;
+}
+
+.fa-apple:hover {
+    color: #ffffff;
+}
+
+.fa-facebook-official {
+    color:white;
+}
+
+.fa-twitter-square {
+    color:white;
+}
+
+.fa-android {
+    color:white;
+}
+
+.fa-apple {
+    color:white;
 }

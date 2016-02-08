@@ -9,5 +9,8 @@
             <input type="checkbox" value="remember-me"> Remember me
         </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="login">Sign in</button>
 </form>
+
+<!-- Controller Script -->
+<script src="Controller/ViewController/login.js"></script>

@@ -12,3 +12,15 @@ function bindShowHide() {
         $('.container').html(data);
     });
 }
+
+function loadContent(page) {
+    $.get('View/includes/'+page+'.php', function(html) {
+        $('.container').html(html);
+    });
+}
+
+function loadHeaderContent(page) {
+    $.get('View/includes/'+page+'.php', function(html) {
+        $('.navContainer').html(html);
+    });
+}

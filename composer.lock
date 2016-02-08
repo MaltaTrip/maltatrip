@@ -4,9 +4,43 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "498a64f7f82bfa5c62f98616aa6d3b3d",
-    "content-hash": "49fb4c38f5bd37e53a6d6246c0455f61",
+    "hash": "fb2ac7e035d5d6db0f1f4847da2e65be",
+    "content-hash": "7748294d9434f74b165b5ec695418a8b",
     "packages": [
+        {
+            "name": "components/font-awesome",
+            "version": "4.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/font-awesome.git",
+                "reference": "069663a8419f9db90f9bec71e71ed4bb9d28d6ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/font-awesome/zipball/069663a8419f9db90f9bec71e71ed4bb9d28d6ee",
+                "reference": "069663a8419f9db90f9bec71e71ed4bb9d28d6ee",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "styles": [
+                        "css/font-awesome.css"
+                    ],
+                    "files": [
+                        "css/font-awesome.min.css",
+                        "fonts/*"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "OFL-1.1"
+            ],
+            "description": "The iconic font designed for use with Twitter Bootstrap.",
+            "time": "2015-11-24 10:33:56"
+        },
         {
             "name": "twbs/bootstrap",
             "version": "dev-master",

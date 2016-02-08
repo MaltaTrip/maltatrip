@@ -11,6 +11,6 @@
   ],
   "require": {
     "twbs/bootstrap": "3.3.x-dev",
-    "twbs/bootstrap-glyphicons": "dev-gh-pages"
+    "components/font-awesome": "4.5.0"
   }
 }
