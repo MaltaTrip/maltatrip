@@ -28,34 +28,34 @@
     <br>
     <br>
     <div class="row">
-        <div class="col-xs-6 col-md-3 text-center">
+        <div class="col-xs-6 col-sm-3 text-center">
             <img src="../../assets/images/Carpool.png" class="img-rounded" style="width:75px; height:75px;">
         </div>
-        <div class="col-xs-6 col-md-3 text-center">
+        <div class="col-xs-6 col-sm-3 text-center">
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Best Car Pooling</p>
             </font>
         </div>
-        <div class="col-xs-6 col-md-3 text-center">
+        <div class="col-xs-6 col-sm-3 text-center">
             <img src="../../assets/images/Time.png" class="img-rounded" style="width:75px; height:75px;">
         </div>
-        <div class="col-xs-6 col-md-3 text-center">
+        <div class="col-xs-6 col-sm-3 text-center">
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Save Time</p></font>
         </div>
     </div>
     <br>
     <br>
     <div class="row">
-        <div class="col-xs-6 col-md-3 text-center">
+        <div class="col-xs-6 col-sm-3 text-center">
             <img src="../../assets/images/Environment.png" class="img-rounded" style="width:75px; height:75px;">
         </div>
-        <div class="col-xs-6 col-md-3 text-center">
+        <div class="col-xs-6 col-sm-3 text-center">
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Reduce Emissions</p>
             </font>
         </div>
-        <div class="col-xs-6 col-md-3 text-center">
+        <div class="col-xs-6 col-sm-3 text-center">
             <img src="../../assets/images/Fuel.png" class="img-rounded" style="width:75px; height:75px;">
         </div>
-        <div class="col-xs-6 col-md-3 text-center">
+        <div class="col-xs-6 col-sm-3 text-center">
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Save Fuel</p></font>
         </div>
     </div>
@@ -65,23 +65,23 @@
     <br>
     <br>
     <div class="row">
-        <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-sm-3">
             <img src="../../assets/images/Login.png" class="center-block" style="width:75px; height:75px;">
             <br>
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Log In</p></font>
         </div>
-        <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-sm-3">
             <img src="../../assets/images/Details.png" class="center-block" style="width:75px; height:75px;">
             <br>
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Enter Details</p>
             </font>
         </div>
-        <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-sm-3">
             <img src="../../assets/images/Path.png" class="center-block" style="width:75px; height:75px;">
             <br>
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Find a Match</p></font>
         </div>
-        <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-sm-3">
             <img src="../../assets/images/Carpool.png" class="center-block" style="width:75px; height:75px;">
             <br>
             <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Car Pool</p></font>
@@ -94,13 +94,13 @@
     <br>
     <br>
     <div class="row">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-sm-6">
             <div class="well well-lg" style="background-color: white;">
                 <p class="text-center" style="font-size: 27px; color:#424242;"><i>Best Experience Ever<i></p>
                 <p class="text-center" style="font-size: 18px; color:#424242;">- John Borg</p>
             </div>
         </div>
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-sm-6">
             <div class="well well-lg" style="background-color: white;">
                 <p class="text-center" style="font-size: 27px; color:#424242;"><i>Recommend Malta Trip 100%<i></p>
                 <p class="text-center" style="font-size: 18px; color:#424242;">- Lucy Attard</p>
