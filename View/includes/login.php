@@ -1,14 +1,17 @@
 <?php
+ session_start();
     if (isset ($_POST['inputEmail']))
     {
         echo "ok";
+
+        $_SESSION['user'] = $_POST['inputEmail'];
     }
     else{
 
 
 ?>
 
-<form target= "container" class="form-signin" id="loginform">
+<form action="post" target= "container" class="form-signin" id="loginform" >
     <h2 class="form-signin-heading">Please sign in</h2>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -22,6 +25,8 @@
     <button class="btn btn-lg btn-primary btn-block"  id="login">Sign in</button>
 </form>
 
+
+        <!-- Controller Script -->
+        <script src="Controller/ViewController/login.js"></script>
+
 <?php } ?>
-<!-- Controller Script -->
-<script src="Controller/ViewController/login.js"></script>

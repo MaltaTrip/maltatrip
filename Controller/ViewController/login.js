@@ -12,6 +12,8 @@ function bindShowHide() {
 
 }
 
+
+
 function bindLogin() {
     $('document').ready(function()
     {
@@ -48,10 +50,11 @@ function bindLogin() {
             $.ajax({
 
                 type: 'POST',
-                url: 'Controller/ViewController/login.js',
+                url: 'View/includes/login.php',
                 data: data,
 
                 success: function (response) {
+                    alert(response);
                     if (response == "ok") {
                         loadContent('welcome');
                         loadHeaderContent('navbar');
