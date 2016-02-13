@@ -6,13 +6,11 @@ require_once("../../Model/User.php");
     if (isset ($_POST['inputEmail']))
     {
         $u=new User();
-        $user= $u->getLogin($_POST['inputEmail'],$_POST['inputPassword']);
-        //$user= $u->getAllUsers();
+        $user= $u->getLogin($_POST['inputEmail'],sha1($_POST['inputPassword']));
         if ($user!=null)
             echo "ok";
         else
             echo "not found";
-
     }
     else{
 
@@ -31,6 +29,7 @@ require_once("../../Model/User.php");
         </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block"  id="login">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block"  id="register">Register Now</button>
 </form>
 
 

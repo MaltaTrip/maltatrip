@@ -33,4 +33,17 @@ class User {
         $st->execute();
         return $st->fetch(PDO::FETCH_OBJ);
     }
+
+    public function insertUser($name,$surname, $locality, $email, $password)
+    {
+        $st = $this->_conn->getHandler()->prepare("INSERT INTO User(name,surname,locality,email,password) VALUES (?,?,?,?,?)");
+        $st->bindParam(1, $name);
+        $st->bindParam(2, $surname);
+        $st->bindParam(3, $locality);
+        $st->bindParam(4, $email);
+        $st->bindParam(5, $password);
+        $st->execute();
+        return $st->rowCount();
+
+    }
 }
