@@ -1,10 +1,18 @@
 <?php
+namespace maltatrip;
+require_once("../../Model/User.php");
  session_start();
+
     if (isset ($_POST['inputEmail']))
     {
-        echo "ok";
+        $u=new User();
+        $user= $u->getLogin($_POST['inputEmail'],$_POST['inputPassword']);
+        //$user= $u->getAllUsers();
+        if ($user!=null)
+            echo "ok";
+        else
+            echo "not found";
 
-        $_SESSION['user'] = $_POST['inputEmail'];
     }
     else{
 

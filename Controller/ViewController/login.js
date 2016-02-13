@@ -60,9 +60,7 @@ function bindLogin() {
                         loadHeaderContent('navbar');
                     }
                     else {
-
                         loadContent('login');
-                        loadHeaderContent('navbar');
                     }
                 }
             });
