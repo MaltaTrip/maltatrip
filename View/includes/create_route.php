@@ -85,7 +85,7 @@
     </div>
     <div class="col-sm-5 col-sm-offset-1 text-center" style="padding: 15px; background-color: #F2F2F2;">
         <h2>Trip Summary</h2>
-        <div id="showMap" style="width: 400px; height: 400px;">
+        <div id="showMap" class="show-map">
 
         </div>
     </div>
