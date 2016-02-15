@@ -16,7 +16,7 @@
             <input type="text" class="form-control" id="from_place" size="40" placeholder="Destination From:">
             <input type="text" class="form-control" id="to_place" size="40" placeholder="Destination To:">
             <input class="form-control" id="date" name="date" size="35" placeholder="DD/MM/YYYY" type="text"/>
-            <button type="button" class="btn btn-warning">Search</button>
+            <button type="button" class="btn btn-warning" id="btnSearchTrip">Search</button>
         </form>
         <br>
         <br>

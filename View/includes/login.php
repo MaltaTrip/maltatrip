@@ -13,8 +13,6 @@ require_once("../../Model/User.php");
             echo "not found";
     }
     else{
-
-
 ?>
 
 <form action="post" target= "container" class="form-signin" id="loginform" >

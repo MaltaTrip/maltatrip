@@ -44,6 +44,5 @@ class User {
         $st->bindParam(5, $password);
         $st->execute();
         return $st->rowCount();
-
     }
 }

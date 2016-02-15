@@ -20,8 +20,6 @@ function loadContent(page) {
     });
 }
 
-
-
 function loadHeaderContent(page) {
     $.get('View/includes/'+page+'.php', function(html) {
         $('.navContainer').html(html);

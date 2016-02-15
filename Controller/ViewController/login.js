@@ -69,7 +69,4 @@ function bindLogin() {
         }
         return false;
     });
-
-
-
 }
