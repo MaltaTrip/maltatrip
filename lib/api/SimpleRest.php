@@ -93,8 +93,13 @@ class SimpleRest {
     public function encodeHtml($responseData) {
 
         $htmlResponse = "<table border='1'>";
-        foreach($responseData as $key=>$value) {
-            $htmlResponse .= "<tr><td>". $key. "</td><td>". $value. "</td></tr>";
+
+        if (!is_scalar($responseData)) {
+            foreach($responseData as $key=>$value) {
+                $htmlResponse .= "<tr><td>". $key. "</td><td>". $value. "</td></tr>";
+            }
+        } else {
+            $htmlResponse .= "<tr><td>Response</td><td>". $responseData. "</td></tr>";
         }
         $htmlResponse .= "</table>";
         return $htmlResponse;
@@ -107,8 +112,12 @@ class SimpleRest {
 
     public function encodeXml($responseData, $entityName) {
         $xml = new SimpleXMLElement("<?xml version=\"1.0\"?><$entityName></$entityName>");
-        foreach($responseData as $key=>$value) {
-            $xml->addChild($key, $value);
+        if (!is_scalar($responseData)) {
+            foreach ($responseData as $key => $value) {
+                $xml->addChild($key, $value);
+            }
+        } else {
+            $xml->addChild("Response", $responseData);
         }
         return $xml->asXML();
     }

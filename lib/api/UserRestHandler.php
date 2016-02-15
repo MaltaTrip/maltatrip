@@ -19,6 +19,15 @@ class UserRestHandler extends SimpleRest {
     public function getLogin($email, $password) {
         $user = new User();
         $rawData = $user->getLogin($email, $password);
+        if ($rawData) {
+            SessionHandler::addToSession('email', $email);
+        }
         $this->emitResponse($rawData, 'user', "Invalid login for: $email");
+    }
+
+    public function checkLoggedIn() {
+        $loggedIn = SessionHandler::isLoggedIn();
+
+        $this->emitResponse($loggedIn, 'user', "User is not logged in.");
     }
 }

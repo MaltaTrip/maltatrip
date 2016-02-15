@@ -5,12 +5,16 @@ $(function() {
 
 function bindEvents() {
 
-
 }
 
 function bindShowHide() {
-    $.get('View/includes/login.php', function(data) {
-        $('.bodyContainer').html(data);
+    $.get('/user/loggedin/', function(response) {
+        if (response == "true") {
+            loadHeaderContent('navbar');
+            loadContent('welcome');
+        } else {
+            loadContent('login');
+        }
     });
 }
 

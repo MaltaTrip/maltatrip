@@ -36,6 +36,12 @@ switch($view){
         $userRestHandler->getLogin($email, $password);
         break;
 
+    case "checkLoggedIn":
+        // to handle REST url /user/loggedin/
+        $userRestHandler = new UserRestHandler();
+        $userRestHandler->checkLoggedIn();
+        break;
+
     case "":
         //404 - not found;
         break;
