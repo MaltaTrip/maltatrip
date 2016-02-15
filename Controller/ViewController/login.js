@@ -47,13 +47,15 @@ function bindLogin() {
     });
 
     function submitForm() {
-        var username = $('#loginform #inputEmail').val();
-        var password = Sha1.hash($('#loginform #inputPassword').val());
+        var loginForm = $('#loginform');
+        var username = loginForm.find('#inputEmail').val();
+        var password = Sha1.hash(loginForm.find('#inputPassword').val());
+        var rememberMe = loginForm.find('#inputRemember').is(':checked');
 
         $.ajax({
             type: 'POST',
             url: '/user/login/',
-            data: {email: username, password: password}
+            data: {email: username, password: password, remember: rememberMe}
         }).done(function() {
             loadContent('welcome');
             loadHeaderContent('navbar');

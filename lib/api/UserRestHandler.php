@@ -16,11 +16,14 @@ class UserRestHandler extends SimpleRest {
         $this->emitResponse($rawData, 'user', "No such user: $userId");
     }
 
-    public function getLogin($email, $password) {
+    public function getLogin($email, $password, $remember) {
         $user = new User();
         $rawData = $user->getLogin($email, $password);
         if ($rawData) {
             SessionHandler::addToSession('email', $email);
+            if ($remember == "true") {
+                setcookie("MaltaTrip", $email, strtotime('+30 days'), "/");
+            }
         }
         $this->emitResponse($rawData, 'user', "Invalid login for: $email");
     }

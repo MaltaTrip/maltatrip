@@ -16,7 +16,8 @@ class SessionHandler {
 
     public static function isLoggedIn() {
         self::checkSession();
-        if (isset($_SESSION['email']) && $_SESSION['email'] != '') {
+        if ((isset($_SESSION['email']) && $_SESSION['email'] != '') ||
+            isset($_COOKIE['MaltaTrip']) && $_COOKIE['MaltaTrip'] != '') {
             return true;
         }
         return false;

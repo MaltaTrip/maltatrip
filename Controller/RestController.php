@@ -33,7 +33,8 @@ switch($view){
         $userRestHandler = new UserRestHandler();
         $email = fetchStringPOST('email');
         $password = fetchStringPOST('password');
-        $userRestHandler->getLogin($email, $password);
+        $remember = fetchStringPOST('remember');
+        $userRestHandler->getLogin($email, $password, $remember);
         break;
 
     case "checkLoggedIn":

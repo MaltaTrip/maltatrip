@@ -8,14 +8,13 @@ function bindEvents() {
 }
 
 function bindShowHide() {
-    $.get('/user/loggedin/', function(response) {
-        if (response == "true") {
+    $.get('/user/loggedin/')
+        .done(function() {
             loadHeaderContent('navbar');
             loadContent('welcome');
-        } else {
+        }).error(function() {
             loadContent('login');
-        }
-    });
+        });
 }
 
 function loadContent(page) {
