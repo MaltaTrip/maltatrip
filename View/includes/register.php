@@ -1,6 +1,6 @@
 <?php
 namespace maltatrip;
-require_once("../../Model/User.php");
+require_once("../../model/User.php");
 session_start();
 
 if (isset ($_POST['inputEmail']))

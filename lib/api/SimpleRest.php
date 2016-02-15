@@ -1,6 +1,6 @@
 <?php
 
-namespace maltatrip;
+namespace maltatrip\api;
 
 use SimpleXMLElement;
 

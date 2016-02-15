@@ -3,5 +3,6 @@ Options +FollowSymlinks
 RewriteEngine on
 
 # map neat URL to internal URL
-RewriteRule ^user/list/$   Controller/RestController.php?view=getUsers [nc,qsa]
+RewriteRule ^user/list/$            Controller/RestController.php?view=getUsers [nc,qsa]
 RewriteRule ^user/list/([0-9]+)/$   Controller/RestController.php?view=getUser&userId=$1 [nc,qsa]
+RewriteRule ^user/login/$           Controller/RestController.php?view=loginUser [nc,qsa]

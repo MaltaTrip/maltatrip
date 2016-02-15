@@ -1,7 +1,7 @@
 <?php
 
-namespace maltatrip;
-require_once ("DBConnect.php");
+namespace maltatrip\model;
+
 use PDO;
 
 class User {
@@ -25,8 +25,7 @@ class User {
         return $st->fetch(PDO::FETCH_OBJ);
     }
 
-    public function getLogin($email, $password)
-    {
+    public function getLogin($email, $password) {
         $st = $this->_conn->getHandler()->prepare("SELECT * FROM User WHERE User.email = :email and User.password= :password");
         $st->bindParam(':email', $email);
         $st->bindParam(':password', $password);
@@ -34,8 +33,7 @@ class User {
         return $st->fetch(PDO::FETCH_OBJ);
     }
 
-    public function insertUser($name,$surname, $locality, $email, $password)
-    {
+    public function insertUser($name,$surname, $locality, $email, $password) {
         $st = $this->_conn->getHandler()->prepare("INSERT INTO User(name,surname,locality,email,password) VALUES (?,?,?,?,?)");
         $st->bindParam(1, $name);
         $st->bindParam(2, $surname);

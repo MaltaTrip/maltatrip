@@ -1,6 +1,6 @@
 <?php
 
-namespace maltatrip;
+namespace maltatrip\model;
 
 use PDO;
 

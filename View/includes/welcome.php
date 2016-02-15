@@ -20,7 +20,7 @@
         </form>
         <br>
         <br>
-        <button type="button" class="btn btn-danger" style="font-size: 25px">Offer a Trip</button>
+        <button type="button" class="btn btn-danger" style="font-size: 25px" id="btnOfferTrip">Offer a Trip</button>
     </div>
 </div>
 

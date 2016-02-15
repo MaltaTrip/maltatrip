@@ -4,14 +4,18 @@ $(function() {
 });
 
 function bindEvents() {
-    bindOfferTrip();
+    bindSearchTrip();
+
+    $('#btnOfferTrip').click(function() {
+        loadContent('create_route');
+    });
 }
 
 function bindShowHide() {
 
 }
 
-function bindOfferTrip() {
+function bindSearchTrip() {
     var defaultBounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(36.000, 14.22),
         new google.maps.LatLng(35.500, 14.32));

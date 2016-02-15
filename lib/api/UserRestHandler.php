@@ -1,6 +1,6 @@
 <?php
-
-namespace maltatrip;
+namespace maltatrip\api;
+use maltatrip\model\User as User;
 
 class UserRestHandler extends SimpleRest {
 
@@ -14,5 +14,11 @@ class UserRestHandler extends SimpleRest {
         $user = new User();
         $rawData = $user->getUser($userId);
         $this->emitResponse($rawData, 'user', "No such user: $userId");
+    }
+
+    public function getLogin($email, $password) {
+        $user = new User();
+        $rawData = $user->getLogin($email, $password);
+        $this->emitResponse($rawData, 'user', "Invalid login for: $email");
     }
 }
