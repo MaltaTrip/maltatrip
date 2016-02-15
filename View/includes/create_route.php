@@ -85,6 +85,11 @@
     </div>
     <div class="col-sm-5 col-sm-offset-1 text-center" style="padding: 15px; background-color: #F2F2F2;">
         <h2>Trip Summary</h2>
-        <p>Google Map showing trip</p>
+        <div id="showMap" style="width: 400px; height: 400px;">
+
+        </div>
     </div>
 </div>
+
+<!-- Controller Script -->
+<script src="Controller/ViewController/create_route.js"></script>
