@@ -41,7 +41,7 @@
         <div class="navContainer">
 
         </div>
-        <div class="container">
+        <div class="bodyContainer">
 
         </div>
 

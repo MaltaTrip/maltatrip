@@ -10,13 +10,13 @@ function bindEvents() {
 
 function bindShowHide() {
     $.get('View/includes/login.php', function(data) {
-        $('.container').html(data);
+        $('.bodyContainer').html(data);
     });
 }
 
 function loadContent(page) {
     $.get('View/includes/'+page+'.php', function(html) {
-        $('.container').html(html);
+        $('.bodyContainer').html(html);
     });
 }
 
