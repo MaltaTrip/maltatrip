@@ -10,6 +10,7 @@ body {
     margin-bottom: 0;
     background-image: url("../../assets/images/car_passengers.png");
     background-size: cover;
+    width: 100%;
 }
 
 .container-fluid {
@@ -20,6 +21,9 @@ body {
     width: 100%;
 }
 
+.head {
+    padding: 0px
+}
 
 .advantages {
     background-color: #F2F2F2;

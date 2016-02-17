@@ -1,15 +1,10 @@
 <?php session_start(); ?>
-<div class="row">
+<div class="container-fluid head">
     <div class="col-xs-12 jumbotron text-center">
         <div style="background-color: transparent">
             <font face="Impact"><p style="font-size: 100px; font-weight: bold; color:white;">Malta Trip</p></font>
-            <font face="Impact"><p style="font-size: 40px; font-weight: bold; color: white">#1 Car Pooling System</p>
-            </font>
+            <font face="Impact"><p style="font-size: 40px; font-weight: bold; color: white">#1 Car Pooling System</p></font>
         </div>
-        <br>
-        <img src="../../assets/images/android-app.png" style="width:160px; height:75px;">
-        <img src="../../assets/images/app_store.png" style="width:160px; height:60px;">
-        <br>
         <br>
         <br>
         <form class="form-inline">
@@ -23,41 +18,31 @@
         <button type="button" class="btn btn-danger" style="font-size: 25px" id="btnOfferTrip">Offer a Trip</button>
     </div>
 </div>
-
 <div class="container-fluid advantages">
     <font face="Helvetica"><p style="font-size: 40px; color:#424242;">Why Malta Trip?</p></font>
     <br>
     <br>
     <div class="row">
-        <div class="col-xs-6 col-sm-3 text-center">
-            <img src="../../assets/images/Carpool.png" class="img-rounded" style="width:75px; height:75px;">
+        <div class="col-xs-6 col-sm-3">
+            <img src="../../assets/images/Traffic_Jam.png" class="center-block" style="width:75px; height:75px;">
+            <br>
+            <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Less Traffic</p></font>
         </div>
-        <div class="col-xs-6 col-sm-3 text-center">
-            <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Best Car Pooling</p>
+        <div class="col-xs-6 col-sm-3">
+            <img src="../../assets/images/Time.png" class="center-block" style="width:75px; height:75px;">
+            <br>
+            <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Save Time</p>
             </font>
         </div>
-        <div class="col-xs-6 col-sm-3 text-center">
-            <img src="../../assets/images/Time.png" class="img-rounded" style="width:75px; height:75px;">
+        <div class="col-xs-6 col-sm-3">
+            <img src="../../assets/images/Environment.png" class="center-block" style="width:75px; height:75px;">
+            <br>
+            <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Help the Environment</p></font>
         </div>
-        <div class="col-xs-6 col-sm-3 text-center">
-            <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Save Time</p></font>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-xs-6 col-sm-3 text-center">
-            <img src="../../assets/images/Environment.png" class="img-rounded" style="width:75px; height:75px;">
-        </div>
-        <div class="col-xs-6 col-sm-3 text-center">
-            <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Reduce Emissions</p>
-            </font>
-        </div>
-        <div class="col-xs-6 col-sm-3 text-center">
-            <img src="../../assets/images/Fuel.png" class="img-rounded" style="width:75px; height:75px;">
-        </div>
-        <div class="col-xs-6 col-sm-3 text-center">
-            <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Save Fuel</p></font>
+        <div class="col-xs-6 col-sm-3">
+            <img src="../../assets/images/Fuel.png" class="center-block" style="width:75px; height:75px;">
+            <br>
+            <font face="Helvetica"><p class="text-center" style="font-size: 20px; color:#424242">Reduce Fuel Costs</p></font>
         </div>
     </div>
 </div>
@@ -111,17 +96,9 @@
 </div>
 <div class="container-fluid social">
     <div class="row">
-        <div class="col-xs-1" style="padding: 10px;">
+        <div class="col-xs-1 col-xs-offset-1" style="padding: 10px;">
             <i class="fa fa-facebook-official fa-3x"></i>
-        </div>
-        <div class="col-xs-1" style="padding: 10px;">
             <i class="fa fa-twitter-square fa-3x"></i>
-        </div>
-        <div class="col-xs-1" style="padding: 10px;">
-            <i class="fa fa-android fa-3x"></i>
-        </div>
-        <div class="col-xs-1" style="padding: 10px;">
-            <i class="fa fa-apple fa-3x"></i>
         </div>
         <div class="col-xs-8 text-right">
             <i class="fa fa-copyright fa-2x" style="color:white"></i>&nbsp <font face="Georgia"><font color="white"><b>Malta
