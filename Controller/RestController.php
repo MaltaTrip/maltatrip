@@ -29,12 +29,22 @@ switch($view){
         break;
 
     case "loginUser":
-        // to handle REST url /user/login/
+    // to handle REST url /user/login/
+    $userRestHandler = new UserRestHandler();
+    $email = fetchStringPOST('email');
+    $password = fetchStringPOST('password');
+    $remember = fetchStringPOST('remember');
+    $userRestHandler->getLogin($email, $password, $remember);
+    break;
+
+    case "registerUser":
         $userRestHandler = new UserRestHandler();
+        $name = fetchStringPOST('name');
+        $surname = fetchStringPOST('surname');
+        $locality = fetchStringPOST('locality');
         $email = fetchStringPOST('email');
         $password = fetchStringPOST('password');
-        $remember = fetchStringPOST('remember');
-        $userRestHandler->getLogin($email, $password, $remember);
+        $userRestHandler->getRegister($name, $surname,$locality,$email, $password);
         break;
 
     case "checkLoggedIn":

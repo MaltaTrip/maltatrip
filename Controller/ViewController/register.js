@@ -56,22 +56,25 @@ function bindRegister() {
     });
 
     function submitForm() {
-        var data = $("#registerform").serialize();
+
+        var regForm = $('#registerform');
+        var name = regForm.find('#name').val();
+        var surname = regForm.find('#surname').val();
+        var locality = regForm.find('#locality').val();
+        var email = regForm.find('#inputEmail').val();
+        var password = Sha1.hash(regForm.find('#inputPassword').val());
+
 
         $.ajax({
             type: 'POST',
-            url: 'View/includes/register.php',
-            data: data,
-
-            success: function (response) {
-                if (response == '1') {
-                    loadContent('welcome');
-                    loadHeaderContent('navbar');
-                }
-                else {
-                    loadContent('register');
-                }
-            }
+            url: '/user/register/',
+            data: {name:name, surname:surname, locality:locality, email:email,password:password}
+        }).done(function(response) {
+            loadContent('welcome');
+            loadHeaderContent('navbar');
+        }).fail(function(error) {
+            $('#error-alert').fadeIn();
+            $('#error-alert .alert-content').html($.parseJSON(error.responseText).error);
         });
     }
     return false;
