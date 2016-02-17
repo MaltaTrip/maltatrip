@@ -34,6 +34,12 @@ class UserRestHandler extends SimpleRest {
         $this->emitResponse($loggedIn, 'user', "User is not logged in.");
     }
 
+    public function logout() {
+        $logout = SessionHandler::logout();
+
+        $this->emitResponse($logout, 'user', "User is not logged in.");
+    }
+
     public function getRegister($name, $surname,$locality,$email, $password) {
         print_r(func_get_args());
         $user = new User();
@@ -44,6 +50,6 @@ class UserRestHandler extends SimpleRest {
         } else {
             $rawData = null;
         }
-        //$this->emitResponse($rawData, 'user', "Unable to register email: $email");
+        $this->emitResponse($rawData, 'user', "Unable to register email: $email");
     }
 }

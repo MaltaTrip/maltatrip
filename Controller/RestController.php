@@ -53,6 +53,11 @@ switch($view){
         $userRestHandler->checkLoggedIn();
         break;
 
+    case "logout":
+        $userRestHandler = new UserRestHandler();
+        $userRestHandler->logout();
+        break;
+
     case "":
         //404 - not found;
         break;

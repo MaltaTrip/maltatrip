@@ -22,4 +22,12 @@ class SessionHandler {
         }
         return false;
     }
+
+    public static function logout(){
+        self::checkSession();
+        session_destroy();
+        if (isset($_COOKIE['MaltaTrip']))  unset($_COOKIE['MaltaTrip']);
+        return true;
+
+    }
 }

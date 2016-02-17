@@ -8,3 +8,4 @@ RewriteRule ^user/list/([0-9]+)/$   Controller/RestController.php?view=getUser&u
 RewriteRule ^user/login/$           Controller/RestController.php?view=loginUser [nc,qsa]
 RewriteRule ^user/loggedin/$        Controller/RestController.php?view=checkLoggedIn [nc,qsa]
 RewriteRule ^user/register/$        Controller/RestController.php?view=registerUser [nc,qsa]
+RewriteRule ^user/logout/$          Controller/RestController.php?view=logout [nc,qsa]

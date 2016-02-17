@@ -6,6 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">MaltaTrip</a>
         </div>
@@ -14,6 +15,7 @@
                 <li class="active"><a href="#welcome">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#logout">Log Out</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
