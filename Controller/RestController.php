@@ -1,11 +1,15 @@
 <?php
 spl_autoload_register(function ($name) {
+    include_once '../vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
     $name = str_replace('maltatrip\\', 'lib\\', $name);
     $filename = '../' . str_replace('\\', '/', $name) . '.php';
-    include($filename);
+    if (file_exists($filename)) {
+        include($filename);
+    }
 });
 
 use maltatrip\api\UserRestHandler as UserRestHandler;
+use maltatrip\api\TripRestHandler as TripRestHandler;
 
 if (filter_has_var(INPUT_GET, 'view'))
     $view = filter_input(INPUT_GET, 'view', FILTER_SANITIZE_STRING);
@@ -29,13 +33,13 @@ switch($view){
         break;
 
     case "loginUser":
-    // to handle REST url /user/login/
-    $userRestHandler = new UserRestHandler();
-    $email = fetchStringPOST('email');
-    $password = fetchStringPOST('password');
-    $remember = fetchStringPOST('remember');
-    $userRestHandler->getLogin($email, $password, $remember);
-    break;
+        // to handle REST url /user/login/
+        $userRestHandler = new UserRestHandler();
+        $email = fetchStringPOST('email');
+        $password = fetchStringPOST('password');
+        $remember = fetchStringPOST('remember');
+        $userRestHandler->getLogin($email, $password, $remember);
+        break;
 
     case "registerUser":
         $userRestHandler = new UserRestHandler();
@@ -57,7 +61,28 @@ switch($view){
         $userRestHandler = new UserRestHandler();
         $userRestHandler->logout();
         break;
-
+    
+    case "createTrip":
+        // to handle REST Url /trip/create/
+        $tripRestHandler = new TripRestHandler();
+        $from = fetchStringPOST('from');
+        $to = fetchStringPOST('to');
+        $pickupDate = fetchStringPOST('pickup_date');
+        $returnDate = fetchStringPOST('return_date');
+        $frequency = fetchStringPOST('frequency');
+        $nPass = fetchStringPOST('nPass');
+        $routeLines = $_POST['routeLines'];
+        $tripRestHandler->insertTrip($from, $to, $pickupDate, $returnDate, $frequency, $nPass, $routeLines);
+        break;
+    case "searchTrip":
+        // to handle REST Url /trip/search/
+        $tripRestHandler = new TripRestHandler();
+        $from = fetchStringPOST('from');
+        $to = fetchStringPOST('to');
+        $date = fetchStringPOST('pickup_date');
+        $routeLines = $_POST['routeLines'];
+        $tripRestHandler->searchTrip($from, $to, $date, $routeLines);
+        break;
     case "":
         //404 - not found;
         break;

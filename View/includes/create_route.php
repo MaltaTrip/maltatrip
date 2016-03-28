@@ -6,7 +6,7 @@
             </div>
             <br>
             <div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" name="createTrip" id="createTrip">
                     <div class="form-group">
                         <label for="dest_from" class="col-sm-4 control-label">From:</label>
                         <div class="col-sm-8">
@@ -55,20 +55,20 @@
                         <label for="frequency" class="col-sm-4 control-label">Frequency:</label>
                         <div class="col-sm-8">
                             <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="once" value="option1">Once
+                                <input type="radio" name="frequency" id="once" value="once" checked>Once
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="mon_fri" value="option1">Monday-Friday
+                                <input type="radio" name="frequency" id="workdays" value="workdays">Monday-Friday
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="daily" value="option1">Daily
+                                <input type="radio" name="frequency" id="daily" value="daily">Daily
                             </label>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="frequency" class="col-sm-4 control-label">Number of Passengers:</label>
+                        <label for="nPass" class="col-sm-4 control-label">Number of Passengers:</label>
                         <div class="col-sm-8">
-                            <select class="form-control" id="freq">
+                            <select class="form-control" id="nPass">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>

@@ -63,6 +63,12 @@
         </div>
     </div>
     <div class="col-sm-7 col-sm-offset-1 text-center" style="padding: 15px; background-color: #F2F2F2;">
-        <h2>This is were matching routes will be shown</h2>
+        <h2>Trip Summary</h2>
+        <div id="showMap" class="show-map">
+
+        </div>
     </div>
 </div>
+
+<!-- Controller Script -->
+<script src="Controller/ViewController/search_route.js"></script>

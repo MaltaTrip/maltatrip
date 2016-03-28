@@ -7,8 +7,7 @@ use PDO;
 class User {
     private $_conn;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->_conn = DBConnect::getConnection();
     }
 

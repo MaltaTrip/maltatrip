@@ -46,7 +46,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twbs/bootstrap/zipball/64f36a316bee1b9324a0411d09fb0531aaf01842",
+            "url": "https://api.github.com/repos/twbs/bootstrap/zipball/7cbd9a181a970b306f1963a612c5cd45aef60f8c",
             "reference": "64f36a316bee1b9324a0411d09fb0531aaf01842",
             "shasum": ""
         },
@@ -86,6 +86,53 @@
             "mobile-first",
             "responsive",
             "web"
+        ]
+    },
+    {
+        "name": "emcconville/google-map-polyline-encoding-tool",
+        "version": "v1.2.4",
+        "version_normalized": "1.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/emcconville/google-map-polyline-encoding-tool.git",
+            "reference": "81843542e407d8d2a9b7bfe1c349aaf287841f17"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/emcconville/google-map-polyline-encoding-tool/zipball/81843542e407d8d2a9b7bfe1c349aaf287841f17",
+            "reference": "81843542e407d8d2a9b7bfe1c349aaf287841f17",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.1.*",
+            "satooshi/php-coveralls": "dev-master",
+            "squizlabs/php_codesniffer": "2.0.0a2"
+        },
+        "time": "2015-01-04 02:49:56",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/Polyline.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GNU"
+        ],
+        "authors": [
+            {
+                "name": "Eric McConville",
+                "email": "emcconville@emcconville.com"
+            }
+        ],
+        "description": "A simple class to handle polyline-encoding for Google Maps",
+        "keywords": [
+            "google",
+            "maps"
         ]
     }
 ]

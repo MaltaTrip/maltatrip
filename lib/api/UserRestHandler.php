@@ -41,10 +41,8 @@ class UserRestHandler extends SimpleRest {
     }
 
     public function getRegister($name, $surname,$locality,$email, $password) {
-        print_r(func_get_args());
         $user = new User();
         $rawData = $user->insertUser($name, $surname,$locality,$email,$password);
-        print_r($rawData);
         if ($rawData > 0) {
             SessionHandler::addToSession('email', $email);
         } else {

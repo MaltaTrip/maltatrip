@@ -11,6 +11,10 @@
   ],
   "require": {
     "twbs/bootstrap": "3.3.x-dev",
-    "components/font-awesome": "4.5.0"
+    "components/font-awesome": "4.5.0",
+    "emcconville/google-map-polyline-encoding-tool": "v1.2.4"
+  },
+  "autoload": {
+    "psr-4": {"maltatrip\\": "lib/"}
   }
 }

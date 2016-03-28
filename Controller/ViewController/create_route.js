@@ -1,4 +1,5 @@
 var from_place, to_place;
+var directionsResponse;
 
 $(function() {
     bindShowHide();
@@ -24,11 +25,24 @@ function bindRouteForm() {
 
     from_autocomplete = new google.maps.places.Autocomplete(from_place[0], {bounds: defaultBounds, types: ['geocode'], componentRestrictions: {country: 'mt'}});
     to_autocomplete = new google.maps.places.Autocomplete(to_place[0], {bounds: defaultBounds, types: ['geocode'], componentRestrictions: {country: 'mt'}});
+
+    $('#createTrip').validate({
+        rules: {
+            from: "required",
+            to: "required",
+            pickup_date: "required"
+        },
+        submitHandler: function (form, event) {
+            event.preventDefault();
+            addTrip();
+            return false;
+        }
+    });
 }
 
 function initMap() {
-    var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
     var map = new google.maps.Map(document.getElementById('showMap'), {
         zoom: 10,
         center: {lat: 35.8833, lng: 14.5000}
@@ -50,8 +64,43 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     }, function(response, status) {
         if (status === google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(response);
+            directionsResponse = response;
         } else {
-            window.alert('Directions request failed due to ' + status);
+            console.log('Directions request failed due to ' + status);
         }
+    });
+}
+
+function addTrip() {
+    var from = $('#from').val();
+    var to = $('#to').val();
+    var pickupDate = $('#pickup_date').val();
+    var returnDate = $('#return_date').val();
+    var nPass = $('#nPass').val();
+
+    var frequency = 'once';
+    if ($('#workdays').is(':checked')) {
+        frequency = 'workdays';
+    } else if ($('#daily').is(':checked')) {
+        frequency = 'daily';
+    }
+
+    var route = directionsResponse.routes[0].legs[0];
+    var routeLines = [];
+    $.each(route.steps, function(key, step) {
+        routeLines.push(step.encoded_lat_lngs);
+    });
+
+    $.ajax({
+        type: 'POST',
+        url: '/trip/create/',
+        data: {from: from, to: to, pickup_date: pickupDate, return_date: returnDate, frequency: frequency, nPass: nPass,
+                routeLines: JSON.stringify(routeLines)}
+    }).done(function() {
+        loadContent('welcome');
+    }).fail(function(error) {
+        console.log(error);
+        $('#error-alert').fadeIn();
+        $('#error-alert .alert-content').html($.parseJSON(error.responseText).error);
     });
 }

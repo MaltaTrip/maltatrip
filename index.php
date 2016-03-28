@@ -57,7 +57,7 @@
 
         <!-- SHA1 JavaScript Implementation -->
         <script src="Controller/ViewController/sha1.js"></script>
-
+        
         <!-- Google Maps API -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1kwf8yBVpz2dKHymp8OOlDu_Cv8TAUmY&libraries=places"></script>
 
