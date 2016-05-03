@@ -7,6 +7,16 @@ $(function() {
 });
 
 function bindEvents() {
+
+    $('#pickup_date').datetimepicker({
+        dateFormat: "dd/mm/yy",
+        minDate: 0
+    });
+    $('#return_date').datetimepicker({
+        dateFormat: "dd/mm/yy",
+        minDate: 0
+    });
+
     bindRouteForm();
     initMap();
 }
@@ -74,8 +84,12 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 function addTrip() {
     var from = $('#from').val();
     var to = $('#to').val();
-    var pickupDate = $('#pickup_date').val();
-    var returnDate = $('#return_date').val();
+
+    var inputPickupDate = moment($('#pickup_date').val(), "DD/MM/YYYY HH:mm");
+    var inputReturnDate = moment($('#return_date').val(), "DD/MM/YYYY HH:mm");
+    var pickupDate = inputPickupDate.format("YYYY-MM-DD HH:mm:ss");
+    var returnDate = inputReturnDate.format("YYYY-MM-DD HH:mm:ss");
+
     var nPass = $('#nPass').val();
 
     var frequency = 'once';

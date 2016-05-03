@@ -42,25 +42,6 @@
                 </form>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title"><b>Driver Details</b></h3>
-            </div>
-            <div class="panel-body">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="driver_name" class="col-sm-2 control-label">Name:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="driver_name">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="driver_rating" class="col-sm-2 control-label">Rating:</label>
-                        <input id="input-2c" class="rating" min="0" max="5" step="0.5" data-size="xs" data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa" data-show-clear="false">
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
     <div class="col-sm-7 col-sm-offset-1 text-center" style="padding: 15px; background-color: #F2F2F2;">
         <h2>Trip Summary</h2>
@@ -68,6 +49,26 @@
 
         </div>
     </div>
+</div>
+<div class="row" style="margin-left: 70px; margin-right: 70px; margin-top: 30px;">
+    <div class="col-lg-12">
+        <div id="routeList">
+
+        </div>
+    </div>
+</div>
+
+<div id="dialog-form" title="Request a Ride">
+    <p class="validateTips">You can make changes to your request e-mail before sending it.</p>
+
+    <form>
+        <fieldset>
+            <textarea rows="20" cols="48" name="emailBody" id="emailBody" class="text ui-widget-content ui-corner-all">
+            </textarea>
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
 </div>
 
 <!-- Controller Script -->

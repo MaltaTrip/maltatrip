@@ -8,6 +8,11 @@ $(function() {
 function bindEvents() {
     bindSearchTrip();
 
+    $( "#date" ).datepicker({
+        dateFormat: "dd/mm/yy",
+        minDate: 0
+    });
+
     $('#btnOfferTrip').click(function() {
         loadContent('create_route');
     });
@@ -22,7 +27,8 @@ function bindEvents() {
             event.preventDefault();
             g_searchFrom = $('#from_place').val();
             g_searchTo = $('#to_place').val();
-            g_searchDate = $('#date').val();
+            var inputDate = moment($('#date').val(), "DD/MM/YYYY");
+            g_searchDate = inputDate.format("YYYY-MM-DD");
             loadContent('search_route');
             return false;
         }

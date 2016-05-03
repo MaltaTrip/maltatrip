@@ -21,6 +21,12 @@
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
+        <!-- jQuery UI -->
+        <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui-timepicker-addon.css" rel="stylesheet">
+        
         <!-- Custom styles for this template -->
         <link href="View/Styles/Styles.css" rel="stylesheet">
 
@@ -34,6 +40,10 @@
     <body>
 
         <div id="error-alert" class="alert alert-danger alert-dismissable" role="alert" style="display: none">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span class="alert-content">Some text here</span>
+        </div>
+        <div id="success-alert" class="alert alert-success alert-dismissable" role="alert" style="display: none">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <span class="alert-content">Some text here</span>
         </div>
@@ -61,6 +71,15 @@
         <!-- Google Maps API -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1kwf8yBVpz2dKHymp8OOlDu_Cv8TAUmY&libraries=places"></script>
 
+        <!-- jQuery UI -->
+        <script src="assets/js/jquery-ui.min.js"></script>
+
+        <!-- jQuery UI Time Picker Addon -->
+        <script src="assets/js/jquery-ui-timepicker-addon.js"></script>
+
+        <!-- Moment jS -->
+        <script src="assets/js/moment.min.js"></script>
+        
         <!-- Controller Script -->
         <script src="Controller/ViewController/index.js"></script>
     </body>

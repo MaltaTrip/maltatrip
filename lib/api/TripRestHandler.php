@@ -18,4 +18,19 @@ class TripRestHandler extends SimpleRest {
         $rawData = $trip->searchTrip($from, $to, $date, json_decode($routeLines));
         $this->emitResponse($rawData, 'trip', "No trips found");
     }
+
+    public function getEmailInfo($tripId, $from, $to, $date) {
+        $trip = new Trip();
+        $rawData = $trip->getEmailInfo($tripId, $from, $to, $date);
+        $this->emitResponse($rawData, 'trip', 'No such trip');
+    }
+
+    public function emailDriver($emailContent) {
+        $email = json_decode($emailContent);
+        $headers = 'From: webmaster@maltatrip.net' . "\r\n" .
+            "Reply-To: $email->from" . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+        mail($email->to, $email->subject, $email->body, $headers);
+        $this->emitResponse("OK", "trip", "Could not send email");
+    }
 }

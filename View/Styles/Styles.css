@@ -77,3 +77,19 @@ body {
     height: 400px;
     display: block;
 }
+
+.routeBox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.routeBox-label {
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    min-width: 150px;
+}
+.routeBox-info {
+    display: inline-block;
+    float: left;
+}

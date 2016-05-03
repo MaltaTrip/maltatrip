@@ -74,6 +74,7 @@ switch($view){
         $routeLines = $_POST['routeLines'];
         $tripRestHandler->insertTrip($from, $to, $pickupDate, $returnDate, $frequency, $nPass, $routeLines);
         break;
+
     case "searchTrip":
         // to handle REST Url /trip/search/
         $tripRestHandler = new TripRestHandler();
@@ -83,6 +84,24 @@ switch($view){
         $routeLines = $_POST['routeLines'];
         $tripRestHandler->searchTrip($from, $to, $date, $routeLines);
         break;
+
+    case "contactDriver":
+        // to handle REST Url /trip/contactDriver/<id>
+        $tripRestHandler = new TripRestHandler();
+        $tripId = fetchStringGET('tripId');
+        $from = fetchStringPOST('from');
+        $to = fetchStringPOST('to');
+        $date = fetchStringPOST('pickup_date');
+        $tripRestHandler->getEmailInfo($tripId, $from, $to, $date);
+        break;
+
+    case "emailDriver":
+        // to handle REST Url /trip/emailDriver/
+        $tripRestHandler = new TripRestHandler();
+        $emailContent = $_POST['email'];
+        $tripRestHandler->emailDriver($emailContent);
+        break;
+
     case "":
         //404 - not found;
         break;

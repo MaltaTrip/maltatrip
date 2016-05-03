@@ -28,6 +28,10 @@ class SessionHandler {
         session_destroy();
         if (isset($_COOKIE['MaltaTrip']))  unset($_COOKIE['MaltaTrip']);
         return true;
+    }
 
+    public static function getSessionValue($key) {
+        self::checkSession();
+        return $_SESSION[$key];
     }
 }

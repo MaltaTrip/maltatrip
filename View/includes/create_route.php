@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="date" class="col-sm-4 control-label">Pickup Date & Time:</label>
+                        <label for="date" class="col-sm-4 control-label">Trip Date & Time:</label>
                         <div class="col-sm-8">
                             <div class="input-group">
                                 <input type="text" class="form-control" id="pickup_date">
