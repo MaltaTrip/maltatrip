@@ -16,6 +16,15 @@ class UserRestHandler extends SimpleRest {
         $this->emitResponse($rawData, 'user', "No such user: $userId");
     }
 
+    public function getLoggedInUser() {
+
+        $user = new User();
+        $session = SessionHandler::getSessionValue('email');
+
+        $rawData = $user->getUserByEmail('mary@test.com');
+        $this->emitResponse($rawData, 'user', "No such user");
+    }
+
     public function getLogin($email, $password, $remember) {
         $user = new User();
         $rawData = $user->getLogin($email, $password);
@@ -49,5 +58,17 @@ class UserRestHandler extends SimpleRest {
             $rawData = null;
         }
         $this->emitResponse($rawData, 'user', "Unable to register email: $email");
+    }
+
+    public function getUpdate($name, $surname,$locality,$email, $password, $id) {
+        $user = new User();
+        $rawData = $user->updateUser($name, $surname,$locality,$email,$password, $id);
+        if ($rawData > 0) {
+            $logout = SessionHandler::logout();
+            SessionHandler::addToSession('email', $email);
+        } else {
+            $rawData = null;
+        }
+        $this->emitResponse($rawData, 'user', "Unable to update info" );
     }
 }

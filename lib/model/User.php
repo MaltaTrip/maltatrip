@@ -24,6 +24,13 @@ class User {
         return $st->fetch(PDO::FETCH_OBJ);
     }
 
+    public function getUserByEmail($email) {
+        $st = $this->_conn->getHandler()->prepare("SELECT * FROM User WHERE User.email = :email");
+        $st->bindParam(':email', $email);
+        $st->execute();
+        return $st->fetch(PDO::FETCH_OBJ);
+    }
+
     public function getLogin($email, $password) {
         $st = $this->_conn->getHandler()->prepare("SELECT * FROM User WHERE User.email = :email and User.password= :password");
         $st->bindParam(':email', $email);
@@ -39,6 +46,18 @@ class User {
         $st->bindParam(3, $locality);
         $st->bindParam(4, $email);
         $st->bindParam(5, $password);
+        $st->execute();
+        return $st->rowCount();
+    }
+
+    public function updateUser($name,$surname, $locality, $email, $password,$id) {
+        $st = $this->_conn->getHandler()->prepare("Update User set 'name'=:n,'surname'=:s,'locality'=:l,'email'=:e,'password'=:p where 'userID'=:uid");
+        $st->bindParam(':n', $name);
+        $st->bindParam(':s', $surname);
+        $st->bindParam(':l', $locality);
+        $st->bindParam(':e', $email);
+        $st->bindParam(':p', $password);
+        $st->bindParam(':uid', $id);
         $st->execute();
         return $st->rowCount();
     }

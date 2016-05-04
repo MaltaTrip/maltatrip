@@ -32,6 +32,11 @@ switch($view){
         $userRestHandler->getUser($userId);
         break;
 
+    case "getLoggedInUser":
+        $userRestHandler = new UserRestHandler();
+        $userRestHandler->getLoggedInUser();
+        break;
+
     case "loginUser":
         // to handle REST url /user/login/
         $userRestHandler = new UserRestHandler();
@@ -48,7 +53,20 @@ switch($view){
         $locality = fetchStringPOST('locality');
         $email = fetchStringPOST('email');
         $password = fetchStringPOST('password');
+
         $userRestHandler->getRegister($name, $surname,$locality,$email, $password);
+        break;
+
+    case "updateUser":
+        // to handle REST url /user/updateUser/
+        $userRestHandler = new UserRestHandler();
+        $name = fetchStringPOST('name');
+        $surname = fetchStringPOST('surname');
+        $locality = fetchStringPOST('locality');
+        $email = fetchStringPOST('email');
+        $password = fetchStringPOST('password');
+        $id = fetchStringPOST('id');
+        $userRestHandler->getUpdate($name, $surname,$locality,$email, $password, $id);
         break;
 
     case "checkLoggedIn":

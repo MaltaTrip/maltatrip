@@ -9,6 +9,8 @@ RewriteRule ^user/login/$                   Controller/RestController.php?view=l
 RewriteRule ^user/loggedin/$                Controller/RestController.php?view=checkLoggedIn [nc,qsa]
 RewriteRule ^user/register/$                Controller/RestController.php?view=registerUser [nc,qsa]
 RewriteRule ^user/logout/$                  Controller/RestController.php?view=logout [nc,qsa]
+RewriteRule ^user/loggedinuser/$            Controller/RestController.php?view=getLoggedInUser [nc,qsa]
+RewriteRule ^user/updateUser/$              Controller/RestController.php?view=updateUser [nc,qsa]
 
 RewriteRule ^trip/create/$                  Controller/RestController.php?view=createTrip [nc,qsa]
 RewriteRule ^trip/search/$                  Controller/RestController.php?view=searchTrip [nc,qsa]

@@ -23,6 +23,7 @@ class SessionHandler {
         return false;
     }
 
+
     public static function logout(){
         self::checkSession();
         session_destroy();

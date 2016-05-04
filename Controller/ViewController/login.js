@@ -57,6 +57,7 @@ function bindLogin() {
             url: '/user/login/',
             data: {email: username, password: password, remember: rememberMe}
         }).done(function() {
+
             loadContent('welcome');
             loadHeaderContent('navbar');
         }).fail(function(error) {
