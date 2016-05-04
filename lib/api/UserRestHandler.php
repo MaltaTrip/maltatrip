@@ -21,7 +21,7 @@ class UserRestHandler extends SimpleRest {
         $user = new User();
         $session = SessionHandler::getSessionValue('email');
 
-        $rawData = $user->getUserByEmail('mary@test.com');
+        $rawData = $user->getUserByEmail($session);
         $this->emitResponse($rawData, 'user', "No such user");
     }
 
@@ -64,8 +64,6 @@ class UserRestHandler extends SimpleRest {
         $user = new User();
         $rawData = $user->updateUser($name, $surname,$locality,$email,$password, $id);
         if ($rawData > 0) {
-
-           // $logout = SessionHandler::logout();
             SessionHandler::addToSession('email', $email);
         } else {
             $rawData = null;
