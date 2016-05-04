@@ -70,4 +70,6 @@ class UserRestHandler extends SimpleRest {
         }
         $this->emitResponse($rawData, 'user', "Unable to update information " );
     }
+
+
 }

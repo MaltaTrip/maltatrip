@@ -25,12 +25,7 @@ switch($view){
         $userRestHandler->getUsers();
         break;
 
-    case "getUser":
-        // to handle REST Url /user/list/<id>/
-        $userRestHandler = new UserRestHandler();
-        $userId = fetchStringGET('userId');
-        $userRestHandler->getUser($userId);
-        break;
+
 
     case "getLoggedInUser":
         $userRestHandler = new UserRestHandler();
@@ -67,6 +62,12 @@ switch($view){
         $password = fetchStringPOST('password');
         $id = fetchStringPOST('id');
         $userRestHandler->getUpdate($name, $surname,$locality,$email, $password, $id);
+        break;
+
+    case "userTrips":
+        // to handle REST url /user/updateUser/
+        $tripRestHandler = new TripRestHandler();
+        $tripRestHandler->getUserTrips();
         break;
 
     case "checkLoggedIn":

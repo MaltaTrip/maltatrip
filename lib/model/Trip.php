@@ -12,6 +12,13 @@ class Trip {
         $this->_conn = DBConnect::getConnection();
     }
 
+    public function getUserTrips($email) {
+        $st = $this->_conn->getHandler()->prepare("SELECT * FROM Trip where user=:u");
+        $st->bindParam(':u', $email);
+        $st->execute();
+        return $st->fetchAll(PDO::FETCH_OBJ);
+    }
+
     public function createTrip($from, $to, $pickupDate, $returnDate, $frequency, $nPass, $routeLines) {
         $st = $this->_conn->getHandler()->prepare("INSERT INTO Trip 
                   (fromPlace, toPlace, pickupDate, returnDate, frequency, nPass, user) VALUES 

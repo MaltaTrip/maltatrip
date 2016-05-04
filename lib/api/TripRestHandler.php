@@ -33,4 +33,12 @@ class TripRestHandler extends SimpleRest {
         mail($email->to, $email->subject, $email->body, $headers);
         $this->emitResponse("OK", "trip", "Could not send email");
     }
+
+    public function getUserTrips() {
+        $email = SessionHandler::getSessionValue('email');
+        $trip = new Trip();
+        $rawData = $trip->getUserTrips($email);
+
+        $this->emitResponse($rawData, 'trip', "Unable to get trip info " );
+    }
 }

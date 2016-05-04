@@ -12,6 +12,7 @@ RewriteRule ^user/logout/$                  Controller/RestController.php?view=l
 RewriteRule ^user/loggedinuser/$            Controller/RestController.php?view=getLoggedInUser [nc,qsa]
 RewriteRule ^user/updateUser/$              Controller/RestController.php?view=updateUser [nc,qsa]
 
+RewriteRule ^trip/usertrips/$               Controller/RestController.php?view=userTrips [nc,qsa]
 RewriteRule ^trip/create/$                  Controller/RestController.php?view=createTrip [nc,qsa]
 RewriteRule ^trip/search/$                  Controller/RestController.php?view=searchTrip [nc,qsa]
 RewriteRule ^trip/contactDriver/([0-9]+)/$  Controller/RestController.php?view=contactDriver&tripId=$1 [nc,qsa]

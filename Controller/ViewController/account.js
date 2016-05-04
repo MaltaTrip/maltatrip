@@ -9,6 +9,7 @@ $(function() {
 
 function bindEvents() {
    getAccountInfo();
+    myTrips();
 
 
 }
@@ -111,5 +112,40 @@ function bindSave() {
         });
     }
     return false;
+}
+
+
+
+
+function myTrips() {
+    $.ajax({
+        type: 'POST',
+        url: '/trip/usertrips/'
+    }).done(function(results) {
+        showRoutes(results);
+        console.log(results);
+    }).fail(function(error) {
+        console.log(error);
+        $('#error-alert').fadeIn();
+        $('#error-alert .alert-content').html($.parseJSON(error.responseText).error);
+    });
+}
+
+function showRoutes(routes) {
+    var routeList = $.parseJSON(routes);
+    var box = "<div class=\"routeBox\"> <br><br> <h2 > My Trips</h2><table class='table table-striped'><tr><th>Pickup Date</th><th>Return Date</th><th>Departing From</th><th>Arriving To</th> <th>Trip Frequency</th><th>Passengers</th></tr>";
+    $.each(routeList, function(key, route) {
+
+        box += "<tr> <td> " + route.pickupDate + "</td> ";
+        box += " <td> " + route.returnDate + "</td> ";
+        box += " <td> " + route.fromPlace + "</td> ";;
+        box += " <td> " + route.toPlace + "</td> ";;
+        box += " <td> " + route.frequency + "</td> ";;
+        box += " <td> " + route.nPass + "</td> ";;
+        box += "</tr>";
+
+    });
+    box += "</table></div>";
+    $('#routeList').html(box);
 }
 
