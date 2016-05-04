@@ -51,7 +51,7 @@ class User {
     }
 
     public function updateUser($name,$surname, $locality, $email, $password,$id) {
-        $st = $this->_conn->getHandler()->prepare("Update User set 'name'=:n,'surname'=:s,'locality'=:l,'email'=:e,'password'=:p where 'userID'=:uid");
+        $st = $this->_conn->getHandler()->prepare("Update User set name=:n, surname=:s,locality=:l,email=:e,password=:p where userID=:uid");
         $st->bindParam(':n', $name);
         $st->bindParam(':s', $surname);
         $st->bindParam(':l', $locality);

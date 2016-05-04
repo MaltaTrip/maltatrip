@@ -96,7 +96,7 @@ function bindSave() {
         var email = regForm.find('#email').val();
         var password = Sha1.hash(regForm.find('#password').val());
         var id = regForm.find('#id').val();
-        console.log ('submitted');
+
 
         $.ajax({
             type: 'POST',

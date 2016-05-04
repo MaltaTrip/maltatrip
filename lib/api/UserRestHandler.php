@@ -64,11 +64,12 @@ class UserRestHandler extends SimpleRest {
         $user = new User();
         $rawData = $user->updateUser($name, $surname,$locality,$email,$password, $id);
         if ($rawData > 0) {
-            $logout = SessionHandler::logout();
+
+           // $logout = SessionHandler::logout();
             SessionHandler::addToSession('email', $email);
         } else {
             $rawData = null;
         }
-        $this->emitResponse($rawData, 'user', "Unable to update info" );
+        $this->emitResponse($rawData, 'user', "Unable to update information " );
     }
 }
