@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<div class="container-fluid head">
+<div class="container-fluid head    ">
     <div class="col-xs-12 jumbotron text-center">
         <div style="background-color: transparent">
             <font face="Impact"><p style="font-size: 100px; font-weight: bold; color:white;">Malta Trip</p></font>

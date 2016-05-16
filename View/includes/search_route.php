@@ -51,9 +51,13 @@
     </div>
 </div>
 <div class="row" style="margin-left: 70px; margin-right: 70px; margin-top: 30px;">
-    <div class="col-lg-12">
-        <div id="routeList">
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div id="routeList">
 
+                </div>
+            </div>
         </div>
     </div>
 </div>

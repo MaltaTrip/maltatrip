@@ -99,28 +99,49 @@ function doSearch() {
     });
 }
 
+//function showRoutes(routes) {
+//    var routeList = $.parseJSON(routes);
+//    var content = "";
+//    $.each(routeList, function(key, route) {
+//        var box = "<div class=\"routeBox\">";
+//        box += "<span class=\"routeBox-label\">Pickup Date</span>";
+//        box += "<span class=\"routeBox-info\">" + route.pickupDate + "</span><br>";
+//        box += "<span class=\"routeBox-label\">Return Date</span>";
+//        box += "<span class=\"routeBox-info\">" + route.returnDate + "</span><br>";
+//        box += "<span class=\"routeBox-label\">Departing From</span>";
+//        box += "<span class=\"routeBox-info\">" + route.fromPlace + "</span><br>";
+//        box += "<span class=\"routeBox-label\">Arriving To</span>";
+//        box += "<span class=\"routeBox-info\">" + route.toPlace + "</span><br>";
+//        box += "<span class=\"routeBox-label\">Trip Frequency</span>";
+//        box += "<span class=\"routeBox-info\">" + route.frequency + "</span><br>";
+//        box += "<span class=\"routeBox-label\">Passengers</span>";
+//        box += "<span class=\"routeBox-info\">" + route.nPass + "</span><br>";
+//        box += "<span class=\"routeBox-label\">Driver</span>";
+//        box += "<span class=\"routeBox-info\">" + route.driver + "</span><br>";
+//        box += "<span class=\"routeBox-label\">Contact Driver</span>";
+//        box += "<span class=\"routeBox-info\">" +
+//            "<button type=\"button\" class=\"btn btn-success\" style=\"font-size: 14px\" onclick=\"contactDriver("
+//            + route.id + ")\">Contact Driver</button></span><br>";
+//        box += "</div>";
+//        content += box;
+//    });
+//
+//    $('#routeList').html(content);
+//}
+
 function showRoutes(routes) {
     var routeList = $.parseJSON(routes);
     var content = "";
     $.each(routeList, function(key, route) {
         var box = "<div class=\"routeBox\">";
-        box += "<span class=\"routeBox-label\">Pickup Date</span>";
-        box += "<span class=\"routeBox-info\">" + route.pickupDate + "</span><br>";
-        box += "<span class=\"routeBox-label\">Return Date</span>";
-        box += "<span class=\"routeBox-info\">" + route.returnDate + "</span><br>";
-        box += "<span class=\"routeBox-label\">Departing From</span>";
-        box += "<span class=\"routeBox-info\">" + route.fromPlace + "</span><br>";
-        box += "<span class=\"routeBox-label\">Arriving To</span>";
-        box += "<span class=\"routeBox-info\">" + route.toPlace + "</span><br>";
-        box += "<span class=\"routeBox-label\">Trip Frequency</span>";
-        box += "<span class=\"routeBox-info\">" + route.frequency + "</span><br>";
-        box += "<span class=\"routeBox-label\">Passengers</span>";
-        box += "<span class=\"routeBox-info\">" + route.nPass + "</span><br>";
-        box += "<span class=\"routeBox-label\">Driver</span>";
-        box += "<span class=\"routeBox-info\">" + route.driver + "</span><br>";
-        box += "<span class=\"routeBox-label\">Contact Driver</span>";
-        box += "<span class=\"routeBox-info\">" +
-            "<button type=\"button\" class=\"btn btn-confirm\" style=\"font-size: 25px\" onclick=\"contactDriver("
+        box += "<p><span class=\"glyphicon glyphicon-calendar\" aria-hidden=\"true\"></span>" + " " + route.pickupDate + "</p>";
+        box += "<p><span class=\"glyphicon glyphicon-calendar\" aria-hidden=\"true\"></span>" + " " + route.returnDate + "</p>";
+        box += "<p><span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" + " " + route.fromPlace + "</p>";
+        box += "<p><span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>" + " " + route.toPlace + "</p>";
+        box += "<p><span class=\"glyphicon glyphicon-repeat\" aria-hidden=\"true\"></span>" + " " + route.frequency + "</p>";
+        box += "<p><span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span>" + " " + route.nPass + " passengers" + "</p>";
+        box += "<p><span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span>" + " " + route.driver + "</p>";
+        box += "<button type=\"button\" class=\"btn btn-success\" style=\"font-size: 14px\" onclick=\"contactDriver("
             + route.id + ")\">Contact Driver</button></span><br>";
         box += "</div>";
         content += box;
